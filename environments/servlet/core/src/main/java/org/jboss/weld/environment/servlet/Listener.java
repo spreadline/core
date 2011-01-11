@@ -127,7 +127,7 @@ public class Listener extends ForwardingServletListener
    {
       try
       {
-         classLoader.loadClass("org.jboss.virtual.VFS"); // check if we can use JBoss VFS
+         classLoader.loadClass("org.jboss.vfs.VFS"); // check if we can use JBoss VFS
          return new VFSURLScanner(classLoader);
       }
       catch (Throwable t)

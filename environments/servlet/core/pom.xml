@@ -27,8 +27,13 @@
          <groupId>org.jboss.weld</groupId>
          <artifactId>weld-spi</artifactId>
       </dependency>
+       <dependency>
+           <groupId>org.jboss</groupId>
+           <artifactId>jboss-vfs</artifactId>
+           <version>3.0.0.CR5</version>
+       </dependency>
 
-      <dependency>
+       <dependency>
          <groupId>javax.servlet</groupId>
          <artifactId>servlet-api</artifactId>
          <scope>provided</scope>
@@ -93,12 +98,6 @@
       <dependency>
          <groupId>org.jboss.weld</groupId>
          <artifactId>weld-extensions</artifactId>
-         <optional>true</optional>
-      </dependency>
-
-      <dependency>
-         <groupId>org.jboss</groupId>
-         <artifactId>jboss-vfs</artifactId>
          <optional>true</optional>
       </dependency>
 

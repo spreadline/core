@@ -21,10 +21,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Set;
 
-import org.jboss.virtual.VFS;
-import org.jboss.virtual.VirtualFile;
-import org.jboss.virtual.VirtualFileVisitor;
-import org.jboss.virtual.VisitorAttributes;
+import org.jboss.vfs.VFS;
+import org.jboss.vfs.VirtualFile;
+import org.jboss.vfs.VirtualFileVisitor;
+import org.jboss.vfs.VisitorAttributes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +49,7 @@ public class VFSURLScanner extends URLScanner
       {
          log.trace("archive: " + file);
 
-         final VirtualFile archive = VFS.getRoot(file.toURI());
+         final VirtualFile archive = VFS.getChild(file.toURI());
          archive.visit(new VirtualFileVisitor()
          {
             public VisitorAttributes getAttributes()
